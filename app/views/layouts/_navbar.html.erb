@@ -1,15 +1,17 @@
 <%= image_tag 'punta.jpg' %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="logo">Mente Pequeña</a>
+  <a class="navbar-brand" href="pages_path">Mente Pequeña</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <% if user_signed_in? %>
-      <%= link_to current_user.email, edit_user_registration_path %>
+      <%= link_to current_user.name, edit_user_registration_path %>
       <li class="nav-item">
-        <a class="nav-link" href="<%=link_to destroy_user_session_path, method: :delete %>">Salir</a>
+        <a class="nav-link" href="#">
+          <%= link_to('Salir', destroy_user_session_path, :method=>'delete') %>
+        </a>
       </li>
       <% else %>
       <li class="nav-item">
