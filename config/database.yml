@@ -15,7 +15,6 @@ test:
   timeout: 5000
 
   production:
-  adapter: postgresql
   database: childbrai_development
-  pool: 5
-  timeout: 5000
+  username: mp
+  password: <%= ENV['MP_DATABASE_PASSWORD'] %>
