@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
    geocoded_by :address
    after_validation :geocode
-   #AIzaSyAEy2YreXXdfErmezNpGx_7FTmqocMJCAw
+
+   enum role: [:admin, :holder, :teacher, :student]
+   
 end

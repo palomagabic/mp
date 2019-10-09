@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_001208) do
+ActiveRecord::Schema.define(version: 2019_10_09_040302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 2019_10_08_001208) do
     t.string "route"
     t.boolean "available"
     t.date "creation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "institutions", force: :cascade do |t|
+    t.string "name"
+    t.date "pay"
+    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -63,10 +71,14 @@ ActiveRecord::Schema.define(version: 2019_10_08_001208) do
     t.float "longitude"
     t.string "address"
     t.string "name"
+    t.integer "role"
+    t.bigint "institution_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["institution_id"], name: "index_users_on_institution_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "plays", "games"
   add_foreign_key "plays", "users"
+  add_foreign_key "users", "institutions"
 end
