@@ -21,9 +21,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
    end
 
   # GET /resource/edit
-   def edit
-     super
-   end
+  # def edit
+  #   super
+  # end
 
   # PUT /resource
   # def update
@@ -48,11 +48,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
    def configure_sign_up_params
-     devise_parameter_sanitizer.permit(:sign_up, keys: [:address, :institution])
+     devise_parameter_sanitizer.permit(:sign_up, keys: [:address])
    end
 
    def save_institution
-     @Institution = Institution.create!(institution: params[:institution])
+     Institution.create!(institution: params[:institution])
    end
 
   # If you have extra params to permit, append them to the sanitizer.
