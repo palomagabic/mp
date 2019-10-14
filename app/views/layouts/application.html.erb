@@ -19,26 +19,25 @@
     <% end %>
     <section>
       <div class="row">
-          <div class="col-sm-4 col-md-3 sidenav">
-            <a id="clickbuttom" href=" <%=games_path %>" class="list-group-item list-group-item-action">
-             ¡JUEGA!
+        <div class="col-sm-4 col-md-3 sidenav">
+            <a id="clickbuttom" href=" <%= pages_filter_path %>" >
+              <button type="button" class="btn btn-danger btn-lg m-2" name="button"> ¡JUEGA! </button>
               </a>
             <a href="<%= pages_type_path %> " class="list-group-item list-group-item-action list-group-item-primary"> Instituciones </a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"> Random </a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Nosotros</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Mision</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Preguntas Frecuentes</a>
-            <a href=" <%= pages_client_path %>" class="list-group-item list-group-item-action list-group-item-info">Colaboracion </a>
-            <a href=" <%= pages_contact_path %>" class="list-group-item list-group-item-action list-group-item-light">Contacto</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Nosotros</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Mision</a>
+            <a href=" <%= pages_client_path %>" class="list-group-item list-group-item-action list-group-item-warning">Colaboracion </a>
+            <a href=" <%= pages_contact_path %>" class="list-group-item list-group-item-action list-group-item-danger">Contacto</a>
             <a href=" <%= pages_new_path %> " class="list-group-item list-group-item-action list-group-item-dark">Noticias</a>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 my-auto">
           <%= yield %>
         </div>
       </div>
+      </section>
       <footer class="container-fluid bg-primary text-white p-5">
          <a href="https://github.com/palomagabic" class="text-white"><i class="fab fa-github fa-3x" data-toggle="tooltip" data-placement="left" title="Github"></i></a>
-         Creado por Paloma Cortes Lazo</footer>
-    </section>
+         Creado por Paloma Cortes Lazo
+       </footer>
   </body>
 </html>
