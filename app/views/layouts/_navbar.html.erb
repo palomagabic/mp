@@ -1,15 +1,31 @@
 <%= image_tag 'punta.jpg', :class=>"img-fluid" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="pages_path">Mente Pequeña</a>
+  <a class="navbar-brand" href="<%= root_path %>">Mente Pequeña</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="<%= pages_type_path %> " class="nav-link"> Instituciones </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Nosotros</a>
+      </li>
+      <li class="nav-item">
+        <a href=" <%= pages_contact_path %>" class="nav-link">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a href=" <%= pages_new_path %> " class="nav-link">Noticias</a>
+      </li>
+    </ul>
     <ul class="navbar-nav ml-auto">
       <% if user_signed_in? %>
-      <%= link_to current_user.name, edit_user_registration_path %>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="<%= edit_user_registration_path %>"> <%= current_user.name %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
           <%= link_to('Salir', destroy_user_session_path, :method=>'delete') %>
         </a>
       </li>
