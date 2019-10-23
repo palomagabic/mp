@@ -1,0 +1,19 @@
+<h1 class="text-danger">Contacto</h1>
+
+<div class="my-4">
+  <%= form_tag send_path,method: :post do |f|%>
+  <div class="field">
+    <%= f.label :name %><br/>
+    <%= f.name_field :name %> <br/>
+  </div>
+
+</div>
+
+<%= label_tag :email %> <br/>
+<%= text_field_tag :email %> <br/>
+<%= label_tag :subject %> <br/>
+<%= text_field_tag :subject %> <br/>
+<%= label_tag :content %><br/>
+<%= text_area_tag :content %> <br/>
+<%= f.submit "Enviar" %>
+<% end %>
