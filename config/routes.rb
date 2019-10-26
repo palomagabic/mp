@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'items/one'
+  get 'items/two'
+  get 'items/three'
+  get 'items/four'
+  get 'items/five'
+  get 'items/six'
+  get 'items/seven'
   get 'send/index'
   resources :games
 

@@ -1,7 +1,11 @@
 class ContactMailer < ApplicationMailer
-  default from: “Mente Pequeña <contacto@childbrain.cl>”
-  def contact_send(params)
-    @parameters=params
-    mail(to:’palo.cortes@alumnosduoc.cl’,subject:@parameters[:subject])
-  end
+  default to: palo.cortes@alumnosduoc.cl
+
+  def contact_send(name, email, body)
+        @name = name
+        @email = email
+        @body = body`enter code here`
+
+        mail(from: email, subject: 'Contact Request')
+    end
 end

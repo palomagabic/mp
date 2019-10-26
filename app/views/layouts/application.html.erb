@@ -18,14 +18,19 @@
     </div>
     <% end %>
     <section>
-            
+
         <div class="col my-auto p-5">
           <%= yield %>
         </div>
     </section>
     <footer class="container-fluid bg-primary text-white p-5">
-      <a href="https://github.com/palomagabic" class="text-white"><i class="fab fa-github fa-3x" data-toggle="tooltip" data-placement="left" title="Github"></i></a>
-         Creado por Paloma Cortes Lazo
+      <div class="row px-5">
+        <a href="https://github.com/palomagabic" class="text-white">
+          <%= fa_icon "github", class: "fa-2x" %>
+        </a>
+           <p class="mx-3 text-monospace">Creado por Paloma Cortes Lazo</p>
+      </div>
+
     </footer>
   </body>
 </html>

@@ -1,19 +1,20 @@
 <h1 class="text-danger">Contacto</h1>
-
-<div class="my-4">
-  <%= form_tag send_path,method: :post do |f|%>
-  <div class="field">
-    <%= f.label :name %><br/>
-    <%= f.name_field :name %> <br/>
+<div class="container-content my-4">
+    <div class="container">
+        <%= form_tag(send_path) do %>
+            <div class="form-group">
+                <%= label_tag 'name', 'Nombre' %>
+                <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Tu Nombre' %>
+            </div>
+           <div class="form-group">
+               <%= label_tag 'email', 'Email' %>
+               <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Tu direccion de correo' %>
+           </div>
+           <div class="form-group">
+               <%= label_tag 'comments', 'Comentario' %>
+               <%= text_area_tag 'comments', nil, class: 'form-control', rows: 4, placeholder: 'Cuentanos...' %>
+           </div>
+           <%= submit_tag "Enviar", class: 'btn btn-danger btn-about' %>
+       <% end %>
   </div>
-
 </div>
-
-<%= label_tag :email %> <br/>
-<%= text_field_tag :email %> <br/>
-<%= label_tag :subject %> <br/>
-<%= text_field_tag :subject %> <br/>
-<%= label_tag :content %><br/>
-<%= text_area_tag :content %> <br/>
-<%= f.submit "Enviar" %>
-<% end %>
