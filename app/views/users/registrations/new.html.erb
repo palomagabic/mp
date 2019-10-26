@@ -10,7 +10,7 @@
 
       <div class="field">
         <%= f.label :institucion %><br />
-        <%= f.text_field :institution_id, autofocus: true %>
+        <%= f.select :institution, Institution.all.map { |e| [e.name, e.id] }, {}, { class: 'form-control' } %>
       </div>
 
       <div class="field">

@@ -3,7 +3,7 @@ class SendController < ApplicationController
     name = params[:name]
     email = params[:email]
     body = params[:comments]
-    ContactMailer.contact_email(name, email, body).deliver
-    redirect_to contact_path, notice: 'Message sent'
+    ContactMailer.contact_send(name, email, body).deliver
+    redirect_to send_path, notice: 'Mensaje enviado'
 end
 end
