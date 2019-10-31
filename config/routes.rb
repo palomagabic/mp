@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :games
 
   devise_for :users, controllers: {
-    sessions: 'users/sessions'
+    registrations: 'users/registrations'
   }
   get 'geocoder/findaddress'
   root 'pages#index'
