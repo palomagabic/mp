@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, only: [:show]
+  before_action :authenticate_user!, only: [:new, :create]
 
   # GET /games
   # GET /games.json
@@ -10,6 +11,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
+    @game = Game.find_by(code: params[:games][:code])
   end
 
   # GET /games/new

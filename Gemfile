@@ -9,6 +9,8 @@ gem 'cancancan'
 gem 'devise'
 gem 'geocoder'
 gem 'active_admin_import'
+gem 'paypal-sdk-rest'
+gem 'omniauth-google-oauth2'
 # Use sqlite3 as the database for Active Record
 gem 'pg', '~> 1.1.4'
 # Use Puma as the app server
@@ -22,6 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'cancancan'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+gem 'delayed_job_active_record'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

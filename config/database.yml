@@ -10,7 +10,7 @@ development: &default
 
 test:
   adapter: postgresql
-  database: childbrai_development
+  database: childbrain_development
   pool: 5
   timeout: 5000
 

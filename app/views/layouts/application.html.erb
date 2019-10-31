@@ -18,27 +18,19 @@
     </div>
     <% end %>
     <section>
-      <div class="row">
-          <div class="col-sm-4 col-md-3 sidenav">
-            <a id="clickbuttom" href=" <%=games_path %>" class="list-group-item list-group-item-action">
-             ¡JUEGA!
-              </a>
-            <a href="<%= pages_type_path %> " class="list-group-item list-group-item-action list-group-item-primary"> Instituciones </a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"> Random </a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Nosotros</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Mision</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Preguntas Frecuentes</a>
-            <a href=" <%= pages_client_path %>" class="list-group-item list-group-item-action list-group-item-info">Colaboracion </a>
-            <a href=" <%= pages_contact_path %>" class="list-group-item list-group-item-action list-group-item-light">Contacto</a>
-            <a href=" <%= pages_new_path %> " class="list-group-item list-group-item-action list-group-item-dark">Noticias</a>
-        </div>
-        <div class="col-md-6">
+
+        <div class="col my-auto p-5">
           <%= yield %>
         </div>
-      </div>
-      <footer class="container-fluid bg-primary text-white p-5">
-         <a href="https://github.com/palomagabic" class="text-white"><i class="fab fa-github fa-3x" data-toggle="tooltip" data-placement="left" title="Github"></i></a>
-         Creado por Paloma Cortes Lazo</footer>
     </section>
+    <footer class="container-fluid sticky-bottom bg-primary text-white p-5">
+      <div class="row px-5">
+        <a href="https://github.com/palomagabic" class="text-white">
+          <%= fa_icon "github", class: "fa-2x" %>
+        </a>
+           <p class="mx-3 text-monospace">Creado por Paloma Cortes Lazo</p>
+      </div>
+
+    </footer>
   </body>
 </html>

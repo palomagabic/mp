@@ -15,6 +15,9 @@ class PagesController < ApplicationController
   end
 
   def type
-    @Institutions = Institution.all
+    @institutions = Institution.all
+  end
+
+  def filter
   end
 end

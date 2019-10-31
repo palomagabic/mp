@@ -1,2 +1,14 @@
-<h1>Pages#type</h1>
-<p>Find me in app/views/pages/type.html.erb</p>
+<h1 class="text-secondary">Instituciones</h1>
+<div class="row">
+  <% @institutions.each do |institution| %>
+  <div class="col-4">
+      <div class="card bg-info m-2">
+        <a href="<%= pages_filter_path %>">
+          <div class="card-body">
+            <h5 class="card-title text-white"><%= institution.name %></h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  <% end %>
+</div>
