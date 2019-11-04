@@ -20,4 +20,9 @@ class PagesController < ApplicationController
 
   def filter
   end
+
+  def team
+    @myinstitution = Institution.joins(:users)
+    @myuser = User.joins(:institution)
+  end
 end

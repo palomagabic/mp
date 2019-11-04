@@ -24,11 +24,6 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_admin_import (4.1.1)
-      activeadmin (>= 1.0.0.pre2)
-      activerecord-import (~> 0.27)
-      rchardet (~> 1.6)
-      rubyzip (~> 1.2)
     activeadmin (2.4.0)
       arbre (~> 1.2, >= 1.2.1)
       formtastic (~> 3.1)
@@ -50,8 +45,6 @@ GEM
       activemodel (= 5.2.3)
       activesupport (= 5.2.3)
       arel (>= 9.0)
-    activerecord-import (0.28.2)
-      activerecord (>= 3.2)
     activestorage (5.2.3)
       actionpack (= 5.2.3)
       activerecord (= 5.2.3)
@@ -247,7 +240,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rchardet (1.8.0)
     regexp_parser (1.6.0)
     responders (3.0.0)
       actionpack (>= 5.0)
@@ -319,7 +311,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_admin_import
+  activeadmin
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
   byebug

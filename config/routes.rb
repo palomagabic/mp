@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get 'items/one'
   get 'items/two'
   get 'items/three'
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
   get 'pages/type'
   get 'pages/filter'
   get 'pages/we'
+  get 'pages/team'
 
   get 'send' => 'send#index'
   post 'send' => 'send#create'

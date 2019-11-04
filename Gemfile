@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.3'
 gem 'cancancan'
 gem 'devise'
 gem 'geocoder'
-gem 'active_admin_import'
+gem 'activeadmin'
 gem 'paypal-sdk-rest'
 gem 'omniauth-google-oauth2'
 # Use sqlite3 as the database for Active Record

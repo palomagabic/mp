@@ -4,3 +4,34 @@
   font-family: "Jomolhari Regular";
   src: url(/assets/fonts/Jomolhari-Regular.ttf) format("truetype");
 }
+
+
+.editinstitution {
+    padding: 20px;
+}
+
+.editinstitution h2 {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+.editinstitution h4 {
+    color: #191919;
+    padding: 10px;
+}
+
+.editinstitution p {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+.editinstitution p:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
