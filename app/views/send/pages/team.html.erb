@@ -1,0 +1,61 @@
+
+  <% @myinstitution.each do |myinstitution| %>
+    <h2> <%= myinstitution.name %> </h2>
+  <% end %>
+
+  <h4>Mi equipo</h4>
+
+  <% @myuser.each do |myuser| %>
+    <p> <%= myuser.name %> </p>
+  <% end %>
+<a href="javascript:document.getElementById('form1').style.display='block';void0">
+  <button type="button" class="btn btn-success">Crear un nuevo usuario</button>
+  </a>
+
+  <%= form_for %>
+
+  <form id="form1" style="display:none">
+
+    <h4>Nuevo usuario</h4>
+
+    <input type="text" name="text1" size="20">
+
+    <input type="submit" value="enviar">
+  </form>
+  <%end%>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.label :nombre %><br />
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :institucion %><br />
+        <%= f.select :institution, Institution.all.map { |e| [e.name, e.id] }, {}, { class: 'form-control' } %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :contraseña %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> caracteres minimo)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :confirme_su_contraseña %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Enviar" %>
+      </div>
+<% end %>

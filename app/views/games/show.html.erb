@@ -2,11 +2,11 @@
 
 <p>
   <strong>Tipo:</strong>
-  <%= @game.type.force_encoding('UTF-8') %>
+  <%= @game.type %>
 </p>
 
 <div class="">
-  <%= @game.route %>
+  <%= @game.route.html_safe %>
 </div>
 
 <p>

@@ -8,17 +8,10 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
+  # POST /resource/sign_in
   #def create
-    #@user = User.find_or_create_from_auth_hash(auth_hash)
-    #self.current_user = @user
-    #redirect_to '/'
-  #end
-
-  #protected
-
-  #def auth_hash
-    #request.env['omniauth.auth']
-  #end
+  #   super
+  # end
 
   # DELETE /resource/sign_out
   # def destroy
