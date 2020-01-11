@@ -11,7 +11,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
-    @game = Game.find_by(code: params[:games][:code])
+  #  @game = Game.find_by(code: params[:games][:code])
   end
 
   # GET /games/new

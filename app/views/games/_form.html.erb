@@ -12,38 +12,43 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :nombre %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :descripcion %>
     <%= form.text_field :description %>
   </div>
 
   <div class="field">
-    <%= form.label :execution %>
+    <%= form.label :ejecuciones %>
     <%= form.number_field :execution %>
   </div>
 
   <div class="field">
-    <%= form.label :type %>
+    <%= form.label :tipo %>
     <%= form.text_field :type %>
   </div>
 
   <div class="field">
-    <%= form.label :route %>
+    <%= form.label :ruta %>
     <%= form.text_field :route %>
   </div>
 
   <div class="field">
-    <%= form.label :available %>
+    <%= form.label :disponible %>
     <%= form.check_box :available %>
   </div>
 
   <div class="field">
-    <%= form.label :creation %>
+    <%= form.label :creacion %>
     <%= form.date_select :creation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :codigo %>
+    <%= form.text_field :code %>
   </div>
 
   <div class="actions">

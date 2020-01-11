@@ -26,5 +26,17 @@ Rails.application.routes.draw do
 
   get 'send' => 'send#index'
   post 'send' => 'send#create'
+
+  get "/login", to: redirect("/auth/google_oauth2")
+
+  namespace :paypal do
+    resources :checkouts, only: [:create] do
+      collection do
+        get :complete
+      end
+    end
+  end
+
+resource :sessions, only: [:create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

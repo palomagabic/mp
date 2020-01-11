@@ -10,9 +10,12 @@ gem 'devise'
 gem 'geocoder'
 gem 'activeadmin'
 gem 'paypal-sdk-rest'
+gem 'omniauth'
 gem 'omniauth-google-oauth2'
-# Use sqlite3 as the database for Active Record
-gem 'pg', '~> 1.1.4'
+gem 'google-api-client'
+gem 'webpacker'
+gem 'config'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

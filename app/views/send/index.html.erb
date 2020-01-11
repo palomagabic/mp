@@ -1,7 +1,7 @@
 <h1 class="text-danger">Contacto</h1>
 <div class="container-content my-4">
     <div class="container">
-        <%= form_tag(send_path) do %>
+        <%= form_tag(send_path, remote: true) do %>
             <div class="form-group">
                 <%= label_tag 'name', 'Nombre' %>
                 <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Tu Nombre' %>

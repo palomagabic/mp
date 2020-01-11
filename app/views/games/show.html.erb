@@ -1,35 +1,18 @@
-<p id="notice"><%= notice %></p>
+<h2> <%= @game.name %> </h2>
 
 <p>
-  <strong>Name:</strong>
-  <%= @game.name %>
-</p>
-
-<p>
-  <strong>Execution:</strong>
-  <%= @game.execution %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @game.type %>
+  <strong>Tipo:</strong>
+  <%= @game.type.force_encoding('UTF-8') %>
 </p>
 
 <div class="">
   <%= @game.route %>
 </div>
 
-
-
 <p>
-  <strong>Available:</strong>
-  <%= @game.available %>
-</p>
-
-<p>
-  <strong>Creation:</strong>
+  <strong>Creacion:</strong>
   <%= @game.creation %>
 </p>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+<%= link_to 'Editar', edit_game_path(@game) %> |
+<%= link_to 'Volver', games_path %>
