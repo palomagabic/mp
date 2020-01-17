@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_11_205314) do
+ActiveRecord::Schema.define(version: 2019_11_04_062454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,9 +62,43 @@ ActiveRecord::Schema.define(version: 2019_11_11_205314) do
   end
 
   create_table "institutions", force: :cascade do |t|
-    t.string "name"
-    t.date "pay"
-    t.boolean "active"
+    t.integer "agno"
+    t.integer "rbd"
+    t.integer "dgv_rbd"
+    t.string "nom_rbd"
+    t.string "mrun"
+    t.integer "rut_sostenedor"
+    t.integer "p_juridica"
+    t.integer "cod_reg_rbd"
+    t.string "nom_reg_rbd_a"
+    t.integer "cod_pro_rbd"
+    t.integer "cod_com_rbd"
+    t.string "nom_com_rbd"
+    t.integer "cod_deprov_rbd"
+    t.string "nom_deprov_rbd"
+    t.integer "cod_depe"
+    t.integer "cod_depe2"
+    t.integer "rural_rbd"
+    t.string "latitud"
+    t.string "longitud"
+    t.integer "convenio_pie"
+    t.integer "ens_01"
+    t.integer "ens_02"
+    t.integer "ens_03"
+    t.integer "ens_04"
+    t.integer "ens_05"
+    t.integer "ens_06"
+    t.integer "ens_07"
+    t.integer "ens_08"
+    t.integer "ens_09"
+    t.integer "ens_10"
+    t.integer "ens_11"
+    t.integer "matricula"
+    t.integer "estado_estab"
+    t.integer "ori_religiosa"
+    t.string "ori_otro_glosa"
+    t.string "pago_matricula"
+    t.string "pago_mensual"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -98,10 +132,9 @@ ActiveRecord::Schema.define(version: 2019_11_11_205314) do
     t.float "longitude"
     t.string "address"
     t.string "name"
+    t.string "lastname"
     t.integer "role"
     t.bigint "institution_id"
-    t.string "provider"
-    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["institution_id"], name: "index_users_on_institution_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -6,11 +6,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
-if Country.count == 0
-  path = File.join(File.dirname(__FILE__), "./seeds/countries.json")
+if Institution.count == 0
+  path = File.join(File.dirname(__FILE__), "./institution.json")
   records = JSON.parse(File.read(path))
   records.each do |record|
-    Country.create!(record)
+    Institution.create!(record)
   end
-  puts "countries are seeded"
+  puts "institutions are seeded"
 end
