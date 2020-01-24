@@ -7,13 +7,21 @@ class ApplicationController < ActionController::Base
   'pages/type' # Or :prefix_to_your_route
   end
 
+  def to_paypal
+    {
+      name: 'plan de juegos mente pequeña',
+      sku: 0000010100,
+      price: 50000,
+      currency: 'CLP',
+      quantity: 1
+    }
+  end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password)}
 
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password)}
   end
-
-
 
 
 end

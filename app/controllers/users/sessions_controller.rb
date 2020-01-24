@@ -9,14 +9,28 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  #def create
-  #   super
-  # end
+  def create
+
+    access_token = request.env["omniauth.auth"]
+    user = User.create_from_omniauth(acces_token)
+
+    user.google_token = access_token.credentials.token
+
+    refresh_token = acces_token.credentials.refresh_token
+    user.google_refresh_token = refresh_token if refresh_token.present?
+    user.save!
+
+    cookies.encrypted[:current_user_id] = { value: user.id, expires: Time.now + 7.days}
+
+    redirect_to root_path
+   end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+   def destroy
+      cookies.encrypted[:current_user_id] = nil
+
+      redirect_to root_path
+   end
 
   # protected
 

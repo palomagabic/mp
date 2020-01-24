@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'items/one'
-  get 'items/two'
-  get 'items/three'
-  get 'items/four'
-  get 'items/five'
-  get 'items/six'
-  get 'items/seven'
-  get 'send/index'
+
   resources :games
 
   devise_for :users, controllers: {
@@ -28,6 +21,10 @@ Rails.application.routes.draw do
   post 'send' => 'send#create'
 
   get "/login", to: redirect("/auth/google_oauth2")
+  get "/logout", to: "sessions#destroy"
+  #get "auth/google_oauth2/callback", to "sessions#create"
+  get 'auth/failure', to: redirect('/')
+  resource :sessions, only: [:create, :destroy]
 
   namespace :paypal do
     resources :checkouts, only: [:create] do
