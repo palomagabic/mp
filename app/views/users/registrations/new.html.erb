@@ -10,7 +10,7 @@
 
       <div class="field">
         <%= f.label :institucion %><br />
-        <%= f.select :institution, Institution.all.map { |e| [e.name, e.id] }, {}, { class: 'form-control' } %>
+        <%= f.select :institution_id, Institution.all.map { |e| [e.nom_rbd, e.id] }, {}, { class: 'form-control' } %>
       </div>
 
       <div class="field">
