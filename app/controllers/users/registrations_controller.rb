@@ -3,19 +3,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
    before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #  @user = User.new
-  # end
-  
+   def new
+    @user = User.new
+    @names = ' - Registrate'
+   end
+
   # POST /resource
   #def create
   #super
   #end
 
   # GET /resource/edit
-  # def edit
-  # super
-  # end
+   def edit
+     @names = ' - Editar mi perfil'
+   end
 
   # PUT /resource
   # def update

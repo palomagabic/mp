@@ -2,11 +2,16 @@
 <html>
   <head>
     <%= favicon_link_tag 'favicon.png'%>
-    <title>Mente pequeña</title>
+    <title>Mente pequeña<%= @names %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <style media="screen">
+    .content {
+      min-height: calc(100vh - 100px);
+    }
+    </style>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -20,7 +25,7 @@
     <% end %>
     <section>
 
-        <div class="vh-95 my-auto p-5">
+        <div class="content vh-97 my-auto p-5">
           <%= yield %>
         </div>
     </section>
