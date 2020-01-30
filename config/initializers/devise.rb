@@ -30,8 +30,11 @@ Devise.setup do |config|
   client_secret = Rails.application.secrets[:google_client_secret]
 
   # Configure Google omniauth with proper scope
-  config.omniauth :google_oauth2, client_id, client_secret, {
-    scope: "contacts.readonly,userinfo.email"
-  }
+  config.omniauth :facebook, '591625221386049', 'a53965dccef7437d565d1227cfa6b293'
+  config.omniauth :twitter, '1222335156821929984-oAjVbxrjgwVTVw8dq9TcRxwgyAzxwB', 'kw9llTzaj7wCShyjFUtbb63lxOJEBMmnmZyvj9qHd6qCX'
+  config.omniauth :github, '6beb27cda0ebc426d790', '0fb1cbebdf212ad40b29d1371cebc22c863bed8d'
+  # config.omniauth :google_oauth2, client_id, client_secret, {
+  #   scope: "contacts.readonly,userinfo.email"
+  # }
 
 end

@@ -8,7 +8,7 @@ class Paypal::CheckoutsController < ApplicationController
       },
       redirect_urls: {
         return_url: complete_paypal_checkouts_url,
-        cancel_url: index
+        cancel_url: index_path
       },
       transaction: [
         {
